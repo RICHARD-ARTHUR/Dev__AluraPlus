@@ -185,6 +185,7 @@ body{
 }
 
 @media screen and (max-width: 768px) { /* ultilizamos essa tag para deixar o site responsivo para o mobile */
+    
     .container{
         display: block; /* como a tela de um smartphone ou tlabet é muito pequena, o display: grid; não é a melhor opção, por isso vamos usar o block, assim os elementos vão ficar em coluna e não em row */
         background-image: none; /* tiramos a imagem de fundo */
@@ -202,6 +203,7 @@ body{
     .secundario {
         margin: 4rem 2rem;
         text-align: center;
+
     }
 
     .secundario__imagem {
@@ -212,7 +214,7 @@ body{
         display: flex;
         flex-direction: column-reverse; /* coloquei assim por não tinha gostado do resultado antes */
         text-align: center;
-        gap: 1rem;
+        gap: 3rem;
         margin: 2rem;
     }
 
