@@ -183,3 +183,75 @@ body{
     color: var(--cinza--sencundario);
     margin: 1rem 7rem 5rem 7rem;
 }
+
+@media screen and (max-width: 768px) { /* ultilizamos essa tag para deixar o site responsivo para o mobile */
+    .container{
+        display: block; /* como a tela de um smartphone ou tlabet é muito pequena, o display: grid; não é a melhor opção, por isso vamos usar o block, assim os elementos vão ficar em coluna e não em row */
+        background-image: none; /* tiramos a imagem de fundo */
+        height: 100%;
+    }
+
+    .container__caixa{
+        margin: 2rem 2rem; /* colocamos para distanciar um pouco os elementos da borda do site */
+    }
+
+    .container__imagem{
+        width: 80%; /* deixamos a imagem do alura Plus com 70% do tamanho do conteiner dela */
+    }
+
+    .secundario {
+        margin: 4rem 2rem;
+        text-align: center;
+    }
+
+    .secundario__imagem {
+        width: 70%;
+    }
+
+    .container__telas{
+        display: flex;
+        flex-direction: column-reverse; /* coloquei assim por não tinha gostado do resultado antes */
+        text-align: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    .container__telas__imagem{
+        width: 100%; /* por algum motivo 100% é o unico valor que faz a imagem alinha na tela */
+    }
+
+    .dispositivos__titulo {
+        font-size: 230%;
+        margin: 0 2rem;
+    }
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape {
+        padding: 10%;
+        margin: auto;
+    }
+
+    .rodape__imagem {
+        margin-bottom: 1rem;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+
+    .rodape__lista__itens {
+        margin: 0.5rem;
+    }
+
+    .rodape__texto1 { /* aqui criei uma nova div para mexer nos dois textos de uma vez, mas só funcionou quando eu selecionei um de cada vez */
+       margin: 0;
+       margin-top: 2rem;
+    }
+
+    .rodape__texto2 {
+        margin: 1rem 0;
+    }
+}
