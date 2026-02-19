@@ -1,0 +1,185 @@
+*{ /* Reforçando: "*" para selecionar todos os elementos e tags */
+   /* Aqui é o nosso reset da pagina, resetamos alguns elementos para 0, assim tirando a estilização padrão que os navegadores adotam */
+
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+
+    --branco--principal: #FFFFFF;
+    --cinza--sencundario: #C0C0C0;
+    --azul--botao: #1678F7;
+    --background: #00030C;
+    --active: #00FFFF;
+    --hover--background-color: #7FFFD4;
+    
+
+}
+
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+
+    background-color: var(--background); /* Reforçando: "var()" é como uma função do css, e é a forma de chamamos as variaveis que definimos lá no começo */
+    color: var(--branco--principal); /* Reforçando: com a tag "color" no body, iremos automaticamente definir qualquer texto, que formos colocar no body, para à cor escolhida */
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal{
+
+    background-image: url("img/Background.png"); /* É assim que colocamos uma imagem pelo css, usamos "url("nomeDaImagem")" */
+    /* podemos usar o "background-img", quando a imagem for apenas decorativa e não tiver tiver o objetivo de facilitar o compreendemento do usuario */
+    background-repeat: no-repeat; /* Utilizamos essa tag para que a imagem que colocamos de fundo não se repita infinitamente quando o usuario afastar o zoom da pagina */
+    background-size: contain; /* aqui colocamos o background para ocupar todo container */ 
+    align-items: center;
+    text-align: center; /* o "text-align" não alinha apenas textos, mas sim tudo que esta no bloco, por isso a imagem també foi alinhada */
+}
+
+.container{
+    height: 100vh; /* Reforçando: vh=viewport que é aquele meta dado que passamos no head, fazemos com que a pagina pega o meta dado do tamanho da tela do user e definimos para a imagem ocupar 100% da tela "100vh" */
+    display: grid; /* o grid divide o conteudo em grades, na tag de baixo criamos duas grades se colocamos uma numeros (50%) criamos outras grades, como ali temos dois numeros temos duas grades */
+    grid-template-columns: 50% 50%; /* por algum motivo o meu deu errado em um dia, deixei de lado e fui dormir no outro dia quando abrir para tentar refazer, ele funcionou sem eu mudar literalmente nada */
+}
+
+.container__caixa{
+    margin: 0 6rem; /* primeiro numero se refere á cima e baixo e o segundo numero se refere à direita e esquerda */
+    /* Margins criam espaço ao redor do elemento e paddings criam dentro dele, ou seja, o padding afasta o conteúdo da borda e não um elemento do outro */
+}
+
+.container__titulo{
+    
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container__imagem{
+    margin: 1rem 0 2rem 0; /* a disposição de numeros na margin, padding, etc... funciona como um relogio no sentido horario, primeiro top, depois direita, baixo, esquerda */
+}
+
+.container__botao{
+    background-color: var(--azul--botao); /* chamamos a variavel da cor do botão */
+    border-radius: 7px; /* arredondamos as bordas do botão */
+    padding: 1rem; /* padding é a distancia do elemento ate sua borda */
+    /* a medida "em" é relativa ao tamanho da font, então se a font tem 16px, 1em equivale à 16px  */
+    color: var(--branco--principal);
+    display: block; /* antes o "botão estava ocupando a mesma linha da imagem, aqui fizemos com que ele ocupasse o bloco dele por completo" */ 
+    text-decoration: none; /* tiramos o sublinhado do texto */
+    margin-bottom: 1rem;
+
+}
+
+.container__botao:hover{
+    padding: 1.2rem;
+    background-color: var(--hover--background-color);
+    color: var(--background);
+}
+
+.container__botao:active{ /* essa pseudo classe do ccs, faz com que a alteração aconteça quando clicamos no botão */
+    background-color: var(--active);
+}
+
+.botao__secundario{
+    background-color: transparent; /* deixamos o fundo transparente */
+    border: 2px solid var(--branco--principal); /* definimos a largura da borda, o tipo e a cor */
+
+}
+
+.container__aviso{
+    font-size: 0.8rem;
+    color: var(--cinza--sencundario);
+
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10rem;
+    gap: 3rem;
+}
+
+.sucundario__imagem{
+    width: 60%;
+}
+
+.sucundario__conteudo__titulo{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--azul--botao);
+    margin-bottom: 0.25rem;
+}
+
+.secundario__conteudo__texto{
+    color: var(--cinza--sencundario);
+}
+
+.secundario__botao{
+    display: inline-block; /* essa tag tenta pegar o melhor do inline e do block, se colocamos mais algum elemento, ele ficaria ao lado do botão, e faz com que nosso botão ainda esteja em um bloco, mas que ele não ocupe todo o bloco */
+    margin-top: 1rem;
+}
+
+.dispositivos{
+    text-align: center; /* !NÃO CONFUNDIR COM O "align-itens"! alinhamos todos os textos no centro  */
+}
+
+.dispositivos__titulo{
+    font-size: 3rem;
+    color: var(--branco--principal); /* a cor já estava como branco, mas definimos com a variavel para ficar mais facil de trocar caso necessario futuramente */
+}
+
+.dispositivos__lista{
+    display: flex; /* colocamos oo display flex para deixa a nossa lista em row (linha) */
+    justify-content: center; /* alinhar no centro */
+    list-style-type: none; /* fizemos com que não tivesse mais aquele pontinho antes dos nossos elementos da lista */
+    margin: 5rem 0;
+}
+
+.dispositivos__lista__itens{
+    font-size: 2rem;
+}
+
+.rodape{
+    text-align: center;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.rodape__lista__itens{
+    color: var(--branco--principal);
+    margin: 2.5rem 0.5rem 1.5rem 0.5rem;
+    text-decoration: none; /* tirar a cor roxa e o sublinhado do texto */
+    list-style-type: none; /* tirar o ponto inicial */
+}
+
+.rodape__lista__itens:hover{ /* quando usamos ":tag" estamos chamando uma pseudo classe css, no caso esse é o hover */
+    font-size: 1.2rem;
+    color: var(--azul--botao);
+}
+
+.rodape__lista__itens:active{
+    color: var(--active);
+}
+
+.rodape__texto1{ /* criei outra classe para poder deixar mais parecido com o figma */
+    font-size: 0.8rem;
+    color: var(--cinza--sencundario);
+    margin: 1rem 7rem;
+}
+
+.rodape__texto2{
+    font-size: 0.8rem;
+    color: var(--cinza--sencundario);
+    margin: 1rem 7rem 5rem 7rem;
+}
